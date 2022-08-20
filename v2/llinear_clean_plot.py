@@ -2,12 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
 
-dfl = pd.read_csv('linear.csv')
-dfl = dfl.sort_values('Num2')
-dfl = dfl.groupby('Num2').mean().reset_index()
+dfl = pd.read_csv('linearlinear.csv')
+dfl = dfl.sort_values('Num4')
+dfl = dfl.groupby('Num4').mean().reset_index()
 
-x = dfl['Num2'].tolist()
-y = dfl['Linear'].tolist()
+x = dfl['Num4'].tolist()
+y = dfl['Llinear'].tolist()
 
 slope, intercept, r, p, std_err = stats.linregress(x, y)
 
@@ -25,7 +25,7 @@ plt.plot(x, mymodel, color='red')
 
 print(slope)
 
-plt.title("Complexitat temporal de la cerca lineal")
+plt.title("Complexitat temporal de la cerca lineal sent k l'últim element")
 plt.xlabel("Mida d'entrada (n)")
 plt.ylabel("Temps (s)")
 

@@ -99,7 +99,7 @@ int main(){
         vector<int> nVector = {};
         int timesPV = 10;
 
-        for (int i = 80050; i <= 100000; i += 50){
+        for (int i = 100000; i <= 200000; i += 100){
             nVector.push_back(i);
         }
 
@@ -170,6 +170,52 @@ int main(){
                 auto stop = high_resolution_clock::now();
                 std::chrono::duration<double> diff = stop-start;
                 binary << nVector[i] << ',' << diff.count() << endl;
+            }
+        }
+    } else if(alg == "ll"){
+        ofstream llinear; llinear.open("/home/jordina/Desktop/new_programming/algs_complexity/v2/linearlinear.csv", std::ofstream::out | std::ofstream::app);
+        vector<int> nVector = {};
+        int timesPV = 10;
+
+        for (int i = 60050; i <= 100000; i += 50){
+            nVector.push_back(i);
+        }
+
+        for (int i = 0; i < nVector.size(); i++){
+            for (int j = 0; j < timesPV; j++){
+                vector<int> tmpV = createVector(nVector[i]);
+
+                auto start = high_resolution_clock::now();
+                for (int q = 0; q < tmpV.size(); q++){
+                    int t = tmpV[q];
+                }
+                auto stop = high_resolution_clock::now();
+                std::chrono::duration<double> diff = stop-start;
+                llinear << nVector[i] << ',' << diff.count() << endl;
+                
+            }
+        }
+    }else if(alg == "llm"){
+        ofstream llm; llm.open("/home/jordina/Desktop/new_programming/algs_complexity/v2/linearlinearmid.csv", std::ofstream::out | std::ofstream::app);
+        vector<int> nVector = {};
+        int timesPV = 10;
+
+        for (int i = 60050; i <= 100000; i += 50){
+            nVector.push_back(i);
+        }
+
+        for (int i = 0; i < nVector.size(); i++){
+            for (int j = 0; j < timesPV; j++){
+                vector<int> tmpV = createVector(nVector[i]);
+
+                auto start = high_resolution_clock::now();
+                for (int q = 0; q < (int)(tmpV.size())/2; q++){
+                    int t = tmpV[q];
+                }
+                auto stop = high_resolution_clock::now();
+                std::chrono::duration<double> diff = stop-start;
+                llm << nVector[i] << ',' << diff.count() << endl;
+                
             }
         }
     }
