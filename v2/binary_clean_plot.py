@@ -14,7 +14,6 @@ s = [1 for n in range(len(x))]
 #dfl.plot.scatter(xx, yy)
 plt.scatter(x, y, s=s)
 
-plt.title("Complexitat temporal de la cerca dicotòmica")
 plt.xlabel("Mida d'entrada (n)")
 plt.ylabel("Temps (s)")
 

@@ -23,6 +23,8 @@ plt.scatter(x, y, s=s)
 #dfm.plot(x='Num1', y='Ordenament per barreja', linewidth=2)
 plt.plot(x, mymodel, color='red')
 
+print(r)
+
 plt.title("Complexitat temporal de l'ordenació per barreja")
 plt.xlabel("Mida d'entrada (n)")
 plt.ylabel("Temps (s)")

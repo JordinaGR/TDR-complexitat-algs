@@ -21,11 +21,10 @@ s = [1 for n in range(len(x))]
 #dfl.plot.scatter(xx, yy)
 plt.scatter(x, y, s=s)
 #dfm.plot(x='Num1', y='Ordenament per barreja', linewidth=2)
-plt.plot(x, mymodel, color='red')
+# plt.plot(x, mymodel, color='red')
 
 print(slope)
 
-plt.title("Complexitat temporal de la cerca lineal sent k l'últim element")
 plt.xlabel("Mida d'entrada (n)")
 plt.ylabel("Temps (s)")
 

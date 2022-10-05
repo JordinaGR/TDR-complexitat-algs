@@ -10,7 +10,7 @@ dfb = dfb.groupby('Num').mean().reset_index()
 x = dfb['Num'].tolist()
 y = dfb['Ordenament bombolla'].tolist()
 
-s = [2 for n in range(len(x))]
+s = [3 for n in range(len(x))]
 
 model = np.poly1d(np.polyfit(x,y, 2))
 polyline = np.linspace(0, 10000, 10000)

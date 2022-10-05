@@ -24,7 +24,7 @@ plt.scatter(x, y, s=s)
 plt.plot(x, mymodel, color='red')
 
 print(slope)
-
+print(r)
 plt.title("Complexitat temporal de la cerca lineal sent k l'element central")
 plt.xlabel("Mida d'entrada (n)")
 plt.ylabel("Temps (s)")

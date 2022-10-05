@@ -99,12 +99,12 @@ int main(){
         vector<int> nVector = {};
         int timesPV = 10;
 
-        for (int i = 100000; i <= 200000; i += 100){
+        for (int i = 100100; i <= 200000; i += 100){
             nVector.push_back(i);
         }
 
-        for (int i = 0; i < nVector.size(); i++){
-            for (int j = 0; j < timesPV; j++){
+        for (int j = 0; j < timesPV; j++){
+            for (int i = 0; i < nVector.size(); i++){
                 vector<int> tmpV = createVector(nVector[i]);
                 int* arr = &tmpV[0];
 
@@ -119,14 +119,14 @@ int main(){
     } else if(alg == "l"){
         ofstream linear; linear.open("/home/jordina/Desktop/new_programming/algs_complexity/v2/linear.csv", std::ofstream::out | std::ofstream::app);
         vector<int> nVector = {};
-        int timesPV = 15;
+        int timesPV = 20;
 
-        for (int i = 102000; i <= 105000; i += 50){
+        for (int i = 10; i <= 60000; i += 20){
             nVector.push_back(i);
         }
 
-        for (int i = 0; i < nVector.size(); i++){
-            for (int j = 0; j < timesPV; j++){
+        for (int j = 0; j < timesPV; j++){
+            for (int i = 0; i < nVector.size(); i++){
                 vector<int> tmpV = createVector(nVector[i]);
                 int k = rand() % nVector[i];
                 int index = -1;
@@ -142,15 +142,15 @@ int main(){
             }
         }
     } else if(alg == "y"){
-        ofstream binary; binary.open("/home/jordina/Desktop/new_programming/algs_complexity/v2/binary.csv", std::ofstream::out | std::ofstream::app);
+        ofstream dicotomica; dicotomica.open("/home/jordina/Desktop/new_programming/algs_complexity/v2/binary.csv", std::ofstream::out | std::ofstream::app);
         vector<int> nVector = {};
-        int timesPV = 10;
+        int timesPV = 30;
 
-        for (int i = 1; i <= 40; i += 1){
+        for (int i = 2; i <= 40000; i += 1){
             nVector.push_back(i);
         }
-        for (int i = 0; i < nVector.size(); i++){
-            for (int j = 0; j < timesPV; j++){
+        for (int j = 0; j < timesPV; j++){
+            for (int i = 0; i < nVector.size(); i++){
                 vector<int> tmpV = createOrderedVector(nVector[i]);
                 int k = rand() % nVector[i];
                 int index = -1;
@@ -169,20 +169,20 @@ int main(){
 
                 auto stop = high_resolution_clock::now();
                 std::chrono::duration<double> diff = stop-start;
-                binary << nVector[i] << ',' << diff.count() << endl;
+                dicotomica << nVector[i] << ',' << diff.count() << endl;
             }
         }
     } else if(alg == "ll"){
         ofstream llinear; llinear.open("/home/jordina/Desktop/new_programming/algs_complexity/v2/linearlinear.csv", std::ofstream::out | std::ofstream::app);
         vector<int> nVector = {};
-        int timesPV = 10;
+        int timesPV = 20;
 
-        for (int i = 60050; i <= 100000; i += 50){
+        for (int i = 10; i <= 60000; i += 20){
             nVector.push_back(i);
         }
 
-        for (int i = 0; i < nVector.size(); i++){
-            for (int j = 0; j < timesPV; j++){
+        for (int j = 0; j < timesPV; j++){
+            for (int i = 0; i < nVector.size(); i++){
                 vector<int> tmpV = createVector(nVector[i]);
 
                 auto start = high_resolution_clock::now();
